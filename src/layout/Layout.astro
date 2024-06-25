@@ -1,0 +1,43 @@
+---
+// Global Styles
+import "../styles/globals.css";
+// Vercel
+//import SpeedInsights from "@vercel/speed-insights/astro";
+// SEO Component
+import SEO_TAGS from "@/components/custom/SEO/SEO_TAGS.astro";
+// Astro Animations
+import { ViewTransitions } from "astro:transitions";
+// Fonts
+import "@fontsource/poppins";
+import "@fontsource-variable/cabin";
+
+interface Props {
+  title_page: string;
+  description_page: string;
+  last_update: string;
+  keywords_page: string[];
+}
+
+const { title_page, description_page, keywords_page, last_update } =
+  Astro.props;
+---
+
+<!doctype html>
+<html lang="es-MX" class="h-full antialiased scroll-smooth">
+  <head>
+    <ViewTransitions />
+    <SEO_TAGS
+      title_page={title_page}
+      description_page={description_page}
+      last_update={last_update}
+      keywords_page={keywords_page}
+    />
+  </head>
+  <!-- Content -->
+  <body class="body">
+    <!-- SLOT -->
+    <slot />
+    <!-- SLOT -->
+    <script src="../library/preline.js"></script>
+  </body>
+</html>

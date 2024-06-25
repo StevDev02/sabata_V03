@@ -1,0 +1,17 @@
+---
+// Components Astro
+import LogoNavRegister from "./LogoNavRegister.astro";
+import NavOptionsRegister from "./NavOptionsRegister.astro";
+---
+
+<nav class="flex items-center justify-between w-full py-5 text-sm px-14">
+  <LogoNavRegister />
+  <ul class="flex items-center justify-between p-1 gap-7">
+    <li class="flex gap-10">
+      <a class="link_login" data-astro-prefetch="tap" href="">Accesorio</a>
+      <a class="link_login" data-astro-prefetch="tap" href="">Ofertas </a>
+      <a class="link_login" data-astro-prefetch="tap" href="">Contacto</a>
+    </li>
+  </ul>
+  <NavOptionsRegister />
+</nav>

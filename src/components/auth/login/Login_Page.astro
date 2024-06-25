@@ -1,0 +1,25 @@
+---
+// Components React
+import { Login_Form } from "./Login_Form";
+// Components Astro
+import NavLogin from "./custom/nav/NavLogin.astro";
+import LoginOptionText from "./LoginOptionText.astro";
+// Styles
+import "./Login.module.css";
+---
+
+<!-- Login Page -->
+<main
+  class="w-full bg-center bg-no-repeat bg-cover h-dvh"
+  style="background-image: url(https://firebasestorage.googleapis.com/v0/b/sabata-auth.appspot.com/o/bg_login.webp?alt=media&token=acee35c1-2657-477e-86da-b06177f057cb)"
+>
+  <header>
+    <NavLogin />
+  </header>
+  <section
+    class="flex items-center justify-between w-full gap-10 px-20 mt-11 header__content"
+  >
+    <LoginOptionText />
+    <Login_Form client:idle />
+  </section>
+</main>

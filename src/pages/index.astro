@@ -1,0 +1,63 @@
+---
+// Layout
+import Home from "../layout/Layout.astro";
+// Components Astro
+import Footer from "@/components/home/custom/components/Footer.astro";
+// Components React
+import { Nav_Home } from "@/components/home/custom/components/nav/Nav_Home";
+// Sections
+import IntroPage from "@/components/home/sections/intro/Intro_Page.astro";
+import CollectionPage from "@/components/home/sections/collection/Collection_Page.astro";
+import DiscountProductsPage from "@/components/home/sections/discount_products/Discount_Products_Page.astro";
+import LifeStylePage from "@/components/home/sections/life_style/Life_Style_Page.astro";
+import SummerOfferPage from "@/components/home/sections/summer_offers/Summer_Offer_Page.astro";
+import WomenFashionPage from "@/components/home/sections/women_fashion/Women_Fashion_Page.astro";
+---
+
+<Home
+  title_page="Inicio"
+  description_page=""
+  last_update="2024-05-02"
+  keywords_page={[""]}
+>
+  <header
+    class="fixed top-0 left-0 z-50 w-full text-sm font-medium text-white navegacion_home"
+  >
+    <Nav_Home client:idle />
+  </header>
+  <main class="relative bg-black">
+    <section class="header_scroll_home cards_scroll_home">
+      <IntroPage />
+    </section>
+    <section class="w-full cards_scroll_home h-dvh">
+      <WomenFashionPage />
+    </section>
+    <section class="w-full cards_scroll_home h-dvh">
+      <SummerOfferPage />
+    </section>
+    <section class="w-full cards_scroll_home h-dvh">
+      <DiscountProductsPage />
+    </section>
+    <section class="w-full cards_scroll_home h-dvh">
+      <LifeStylePage />
+    </section>
+    <section class="h-[280dvh] footer_scroll_home">
+      <CollectionPage />
+    </section>
+    <Footer />
+  </main>
+</Home>
+
+<style>
+  .blur_menu {
+    backdrop-filter: blur(2px) saturate(97%);
+    -webkit-backdrop-filter: blur(2px) saturate(97%);
+    background-color: rgba(1, 1, 1, 0.05);
+  }
+  html,
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+</style>
+
+<script src="../animations/useScrollHome.ts"></script>

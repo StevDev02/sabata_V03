@@ -1,0 +1,162 @@
+---
+import { SEO } from "astro-seo";
+
+interface Props {
+  title_page: string;
+  description_page: string;
+  last_update: string;
+  keywords_page: string[];
+}
+
+const { title_page, description_page, keywords_page, last_update } =
+  Astro.props;
+
+// Limited Keywords
+const limitedKeywords = Array.isArray(keywords_page)
+  ? keywords_page.slice(0, 50).join(",")
+  : "";
+// Name of the Enterprise
+const name_enterprise = "Sabata";
+// Canonical URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+// Dynamic Title Page
+const makeTitle = title_page
+  ? title_page + " | " + "Sabata"
+  : "Ecommerce - Sabata";
+// Automatic Copyright
+const copyright = new Date().getFullYear() + "," + "Sabata";
+// Image for SEO
+const resolvedImageWithDomain = new URL("/", Astro.site).toString();
+---
+
+<SEO
+  title={makeTitle.substring(0, 60)}
+  titleTemplate={makeTitle.substring(0, 60)}
+  description={description_page.substring(0, 162)}
+  canonical={canonicalURL}
+  charset="UTF-8"
+  twitter={{
+    creator: "@Sabata",
+    title: makeTitle.substring(0, 60),
+    description: description_page.substring(0, 162),
+    card: "summary_large_image",
+    site: "@Sabata",
+    image: resolvedImageWithDomain || "/favicon.svg",
+    imageAlt: name_enterprise,
+  }}
+  openGraph={{
+    basic: {
+      title: makeTitle.substring(0, 60),
+      type: "website",
+      image: resolvedImageWithDomain || "/favicon.svg",
+      url: canonicalURL,
+    },
+    optional: {
+      description: description_page.substring(0, 162),
+      locale: "es-MX",
+      siteName: name_enterprise,
+      determiner: "",
+    },
+    article: {
+      authors: [name_enterprise],
+      section: "Ecommerce",
+      publishedTime: last_update,
+      modifiedTime: last_update,
+    },
+  }}
+  extend={{
+    link: [
+      // Favicon
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicon.svg",
+      },
+      // Sitemap
+      {
+        rel: "sitemap",
+        href: "/sitemap-index.xml",
+      },
+    ],
+    meta: [
+      // Keywords
+      {
+        name: "keywords",
+        content: limitedKeywords,
+      },
+      // Viewport
+      {
+        name: "viewport",
+        content: "width=device-width",
+      },
+      // CSP
+      {
+        httpEquiv: "Content-Security-Policy",
+        content:
+          "upgrade-insecure-requests;",
+      },
+      // Indexation
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+      {
+        name: "googlebot",
+        content: "index, follow",
+      },
+      // Apple IOS
+      {
+        name: "apple-mobile-web-app-capable",
+        content: "yes"
+      },
+      // Cache
+      {
+        httpEquiv: "Cache-Control",
+        content: "max-age=31536000",
+      },
+      // Astro Generator
+      {
+        name: "generator",
+        content: Astro.generator,
+      },
+      // Author
+      {
+        name: "author",
+        content: name_enterprise,
+      },
+      // Publisher
+      {
+        name: "publisher",
+        content: name_enterprise,
+      },
+      // Copyright
+      {
+        name: "copyright",
+        content: copyright,
+      },
+      // Default Theme
+      {
+        name: "theme-color",
+        content: "#FFFFFF",
+      },
+      // Last Modified
+      {
+        name: "date",
+        content: last_update,
+      },
+      // Location
+      {
+        name: "geo.region",
+        content: "MX-EC",
+      },
+      {
+        name: "geo.placename",
+        content: "Quito, Ecuador",
+      },
+      {
+        name: "address",
+        content: "Quito, Ecuador",
+      },
+    ],
+  }}
+/>

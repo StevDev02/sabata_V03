@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow-x: hidden;
+  color-scheme: light;
+}
+
+img, svg {
+  content-visibility: auto;
+  image-rendering: optimizeSpeed;
+  shape-rendering: auto;
+  text-rendering: auto;
+}
+
+body::-webkit-scrollbar,
+&::-moz-scrollbar,
+&::-ms-scrollbar,
+&::-o-scrollbar {
+  overflow: hidden;
+  -ms-overflow-style: none;
+  display: none;
+}

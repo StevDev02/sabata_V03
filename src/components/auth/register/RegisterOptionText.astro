@@ -1,0 +1,59 @@
+---
+// Components React
+import { Button } from "@/components/ui/button";
+
+// Custom Icons
+import { GoogleIcon } from "@/components/custom/Icons/Google";
+import { FacebookIcon } from "@/components/custom/Icons/Facebook";
+---
+
+<!-- Login / Register Options -->
+<div class="relative w-[400px]">
+  <h2 class="pb-12 text-4xl font-semibold text-center -leading-5">
+    Registrate y unete a la comunidad de sabata
+  </h2>
+  <p class="text-sm text-center">
+    Si ya te registraste, puedes <a
+      class="text-[#ef7674] font-semibold hover:underline"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="/login"
+      title="Iniciar Sesion | Sabata"
+      aria-label="Iniciar Sesion | Sabata">iniciar sesion con correo</a
+    > y navegar en nuestra comunidad.
+  </p>
+  <div class="bg_text_login -z-0"></div>
+  <div class="bg_text_login2 -z-0"></div>
+  <div class="flex items-center justify-center gap-2 pt-5 pb-5">
+    <div class="w-[120px] h-[1px] bg-[#00000018]"></div>
+    <label class="text-xs text-[#00000080]">O inicia sesion con</label><div
+      class="w-[120px] h-[1px] bg-[#00000018]"
+    >
+    </div>
+  </div>
+  <div class="flex items-center justify-center gap-4">
+    <a
+      href="/login"
+      title="Iniciar Sesion con Google | Sabata"
+      aria-label="Iniciar Sesion con Google | Sabata"
+    >
+      <Button
+        title="Iniciar Sesion con Google | Sabata"
+        aria-label="Iniciar Sesion con Google | Sabata"
+        className="bg-white rounded-sm shadow-md"
+      >
+        <GoogleIcon />
+      </Button>
+    </a>
+    <a
+      class="hidden"
+      href="/login"
+      title="Iniciar Sesion con Facebook | Sabata"
+      aria-label="Iniciar Sesion con Facebook | Sabata"
+    >
+      <Button className="bg-white rounded-sm shadow-md">
+        <FacebookIcon />
+      </Button>
+    </a>
+  </div>
+</div>

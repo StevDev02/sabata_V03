@@ -1,0 +1,114 @@
+.link_login {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.bg_login_img {
+  background-image: url("https://www.xtrafondos.com/wallpapers/selena-gomez-cr-fashion-book-photoshoot-11058.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.link_login:hover {
+  color: #ef7674;
+  transition: all 0.3s ease-in-out;
+}
+
+.link_login:hover::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: -3px;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: #ef7674;
+  transition: all 0.3s ease-in-out;
+}
+
+.link_login_active {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #ef7674;
+  transition: all 0.3s ease-in-out;
+}
+
+.link_login_active::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: -5px;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: #ef7674;
+  transition: all 0.3s ease-in-out;
+}
+
+.img_header_login {
+  mask-image: linear-gradient(black 90%, transparent);
+}
+
+.bg_text_login2 {
+  background: #ef7674;
+  opacity: 0.08;
+  top: 30%;
+  left: 0%;
+  border-radius: 100%;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  -webkit-box-shadow: -0.5px 3px 32px 20px #ef7674;
+  -moz-box-shadow: -0.5px 3px 32px 20px #ef7674;
+  box-shadow: -0.5px 3px 32px 20px #ef7674;
+}
+
+.bg_text_login {
+  content: "";
+  background: #dda82a;
+  opacity: 0.08;
+  top: 70%;
+  right: -10%;
+  border-radius: 100%;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  -webkit-box-shadow: -0.5px 3px 32px 20px #dda82a;
+  -moz-box-shadow: -0.5px 3px 32px 20px #dda82a;
+  box-shadow: -0.5px 3px 32px 20px #dda82a;
+}
+
+.link__register {
+  -webkit-box-shadow: 0 3px 10px -2.5px #dddddd;
+  -moz-box-shadow: 0 3px 10px -2.5px #dddddd;
+  box-shadow: 0 3px 10px -2.5px #dddddd;
+}
+
+.link_login_res:hover {
+  -webkit-box-shadow: 0 3px 10px -2.5px #ef7674;
+  -moz-box-shadow: 0 3px 10px -2.5px #ef7674;
+  box-shadow: 0 3px 10px -2.5px #ef7674;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputLogin {
+  transition: all 0.3s ease-in-out;
+}
+
+.inputLogin:focus {
+  background: transparent;
+}
+
+.inputLogin:focus::placeholder {
+  transform: translateY(-1.5em); /* Mueve el placeholder hacia arriba */
+  transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "sourceMap": true,
+    "inlineSources": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      // Components
+      "@/*": [
+        "./src/*"
+      ],
+    }
+  }
+}

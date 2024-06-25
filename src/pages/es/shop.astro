@@ -1,0 +1,69 @@
+---
+// Layout
+import Shop_Layout from "../../layout/Layout.astro";
+// Sections
+import Shop_Page from "@/components/shop/Shop_Page.astro";
+// Optimized Image
+import { ImageComponent } from "@/components/custom/Image/ImageComponent";
+// Firebase
+import { app } from "../../firebase/server";
+import { getAuth } from "firebase-admin/auth";
+
+const auth = getAuth(app);
+
+/* Check current session */
+if (!Astro.cookies.has("__session")) {
+  return Astro.redirect("/login");
+}
+
+const sessionCookie = Astro.cookies.get("__session")?.value;
+
+if (!sessionCookie) {
+  console.log("La Sesion Ha Expirado");
+  return Astro.redirect("/login");
+}
+
+const decodedCookie = await auth.verifySessionCookie(sessionCookie);
+const user = await auth.getUser(decodedCookie.uid);
+
+try {
+  if (!user) {
+    return Astro.redirect("/login");
+  }
+
+  // Proceed with authenticated user logic here
+} catch (error) {
+  console.error("Error verifying session or retrieving user:", error);
+  return Astro.redirect("/login");
+}
+---
+
+<Shop_Layout
+  title_page="Tienda"
+  description_page=""
+  last_update="2024-05-02"
+  keywords_page={[""]}
+>
+  <main class="flex flex-col items-center justify-center w-full gap-4 h-dvh">
+    <!-- Testing -->
+    <h1 class="text-2xl font-semibold">Tienda</h1>
+    <h2>Bienvenido, {user.displayName}</h2>
+    <h3>Tu Correo es: {user.email}</h3>
+    <ImageComponent
+      className="rounded-full w-14 h-14 bg-slate-100"
+      src={user.photoURL || "https://github.com/shadcn.png"}
+      alt=""
+    />
+    <Shop_Page />
+  </main>
+</Shop_Layout>
+
+<style>
+  html {
+    font-family:
+      "Poppins",
+      -apple-system,
+      system-ui,
+      sans-serif;
+  }
+</style>
