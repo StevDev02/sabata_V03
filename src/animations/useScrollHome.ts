@@ -31,7 +31,6 @@ if (footer && navegacion_home && header) {
         },
     });
 
-    // Create ScrollTriggers for the panels
     gsap.utils.toArray(".cards_scroll_home").forEach((panel) => {
         if (panel instanceof HTMLElement) {
             ScrollTrigger.create({

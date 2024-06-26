@@ -1,7 +1,12 @@
 ---
-import { Button } from "@/components/ui/button";
+import { ShopProvaider } from "../carrito/Shop_Provaider";
+import "@fontsource/poppins";
 ---
+<ShopProvaider client:idle />
 
-<form action="/api/auth/logout" data-astro-reload>
-  <Button type="submit">Cerrar Sesion</Button>
-</form>
+<style>
+    /* todo dentro de la clase font_poppins tenga el font-family poppins */
+    .font_poppins {
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
