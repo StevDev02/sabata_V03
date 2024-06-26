@@ -44,10 +44,10 @@ export function NavBar() {
     return ( 
         <>
                 <div id="filters" className="flex z-50 w-full px-4 h-10 justify-between items-center" >
-                <div class="flex items-center gap-5">
-                    <a href="/" id="toHome" data-astro-prefetch="tap" class="tracking-[5px]">SABATA</a>
-                    <div class="w-[2px] h-[15px] bg-black"></div>
-                    <p class="tracking-[2px]">TIENDA</p>
+                <div className="flex items-center gap-5">
+                    <a href="/" id="toHome" data-astro-prefetch="tap" className="tracking-[5px]">SABATA</a>
+                    <div className="w-[2px] h-[15px] bg-black"></div>
+                    <p className="tracking-[2px]">TIENDA</p>
                 </div>
                     
                     <div className="flex place-content-center gap-2">
