@@ -18,7 +18,6 @@ export default defineConfig({
     sitemap({
       changefreq: "monthly",
       priority: 0.8,
-      // Cambiar para el deploy
       lastmod: new Date("2024-06-11"),
       i18n: {
         defaultLocale: "es",

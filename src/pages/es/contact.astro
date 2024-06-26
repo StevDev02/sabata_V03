@@ -1,0 +1,411 @@
+---
+// Layout
+import { CarouselSizeContactFooter } from "@/components/contact/components/Carousel_Footer_Contact"
+import { Marcas_Map } from "@/components/contact/components/Marcas_Map"
+import { BackgroundImgComponent } from "@/components/custom/Image/BackgroundImgComponent"
+import Contact_Layout from "@/layout/Layout.astro"
+---
+
+<Contact_Layout
+  title_page="Contacto"
+  description_page=""
+  last_update="2024-05-02"
+  keywords_page={[""]}
+>
+  <main class="relative w-full text-white bg-[#232323]">
+
+    <nav class="w-[950px] bg-[#232323] top-8 py-1.5 rounded-full left-[50%] shadow-lg border border-[#232323] shadow-[#151515] z-[999] fixed translate-x-[-50%] translate-y-[-50%] flex place-items-center ">
+
+      <ul class="w-full px-4  gap-x-8 items-center justify-between flex">
+        <li class="cursor-pointe text-sm hover:bg-white rounded-full hover:text-black p-1">
+          <a href="/"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="p-0 m-0 icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></a>
+        </li>
+        <li class="cursor-pointe text-sm hover:bg-white rounded-xl hover:text-black py-0.5 px-2">
+          <a href="#intro">Inicio</a>
+        </li>
+        <li class="cursor-pointer text-sm hover:bg-white rounded-xl hover:text-black py-0.5 px-2">
+          <a href="#nosotros">Sobre Nosotros</a>
+        </li>
+        <li class="cursor-pointer text-sm hover:bg-white rounded-xl hover:text-black py-0.5 px-2">
+          <a href="#contacto">Contacto</a>
+        </li>
+        <li class="cursor-pointer text-sm hover:bg-white rounded-xl hover:text-black py-0.5 px-2">
+          <a href="#mision">Misión</a>
+        </li>
+        <li class="cursor-pointer text-sm hover:bg-white rounded-xl hover:text-black py-0.5 px-2">
+          <a href="#marcas">Nuestras marcas</a>
+        </li>
+        <li class="cursor-pointer text-sm hover:bg-white rounded-xl hover:text-black py-0.5 px-2">
+          <a href="#vision">Visión</a>
+        </li>
+        <li class="cursor-pointer text-sm hover:bg-white rounded-xl hover:text-black py-0.5 px-2">
+          <a href="#noticias">Noticias</a>
+        </li>
+        <li class="cursor-pointer text-sm hover:bg-white rounded-xl hover:text-black py-0.5 px-2">
+          <a href="#gracias">Gracias</a>
+        </li>
+        <li class="cursor-pointer text-sm hover:bg-white rounded-full hover:text-black p-1">
+          <a href="/es/auth/login"> <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-square-rounded"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /><path d="M6 20.05v-.05a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v.05" /></svg></a>
+        </li>
+      </ul>
+    </nav>
+
+    <BackgroundImgComponent className="relative z-0 w-full bg-center bg-no-repeat bg-cover h-dvh"
+    id="intro"
+    src="https://firebasestorage.googleapis.com/v0/b/sabata-auth.appspot.com/o/Bg-Gradients%2Fbg-contact-gradients.jpg?alt=media&token=fc6b2a13-e6dc-4bc0-835b-574c04b16ebe">
+
+    <div class="absolute place-content-center flex-col top-0 left-0 z-20 flex w-full py-12 text-white cursor-default bg-black/30 h-dvh">
+        <h2 class="text-[#bbbbbb] transition-all duration-1000 ease-in-out hover:text-[white] cursor-pointer text-center leading-none tracking-tighter text-[150px] font-semibold">
+        SABATA
+        </h2>
+        <h2 class="text-[#bbbbbb] transition-all duration-1000 ease-in-out hover:text-white cursor-pointer text-center leading-none tracking-tighter text-[150px] font-semibold">
+        Por que la ropa que usas te define
+        </h2>
+    </div>
+
+    <div class="absolute top-0 left-0 z-10 w-full cursor-default bg-black/0 h-dvh"/>
+
+    </BackgroundImgComponent>
+
+    <section id="nosotros"class="w-full flex flex-col place-content-center gap-10  px-10 flex flex-col h-[100vh]">
+      <h2 class="text-2xl text-black text-nowrap inline-block py-2 w-[257px] pl-6 rounded-[50px] font-bold uppercase bg-white">Sobre Nosotros</h2>
+
+      <h2 class="flex flex-col gap-2 leading-[60px] text-white text-[64px]">
+        <span>Desatando la Revolución: La </span>
+        <span>Vanguardia de la Moda Femenina  </span>
+        <span>y el nuevo estilo de vida de las mujeres.</span>
+      </h2>
+
+      <p class="mt-5 text-3xl font-thin leading-10 pr-14 text-[#a0a0a0]">
+        La moda femenina es un universo diverso y en constante evolución que refleja
+        la creatividad, la personalidad y la expresión individual de las mujeres en
+        todo el mundo. Desde la elegancia clásica de un vestido negro hasta la
+        audacia de una declaración de moda vanguardista, la moda ofrece a las
+        mujeres la oportunidad de explorar y experimentar con una amplia gama de
+        estilos telas, colores y patrones.
+      </p>
+    </section>
+
+    <section id="contacto" class="w-full flex items-center h-[100vh]">
+
+        <div class="w-[580px] items-center flex flex-col gap-5 justify-center ">
+        <h2 class="text-6xl font-semibold text_animation_h2">Contactanos</h2>
+        <ul class="flex flex-col gap-3 mt-6">
+            <li
+            class="w-[458px] hover:bg-[#2e2e2e46] transition-all ease-in-out items-center gap-6 justify-center flex h-[118px] rounded-lg border-[#2e2e2e] border"
+            >
+            <img
+                class="rounded-full w-[70px]"
+                src="https://unavatar.io/midudev"
+                alt=""
+            />
+            <p
+                class="text-[#979797] ml-4 flex flex-col pr-14 text-[17px] font-medium"
+            >
+                <span class="-mt-1">Hola Soy Jessica y estaré feliz de</span>
+                <span class="-mt-1">poder ayudarte con tu solicitud de</span>
+                <span class="-mt-1"
+                >proyecto. <span class="text-base text-white"
+                    >Sólo envíame un correo</span
+                ></span
+                >
+                <span class="-mt-1 text-base text-white"
+                >electrónico: <span class="border-b border-white cursor-pointer"
+                    >stev_0w0@gmail.com</span
+                ></span>
+            </p>
+            </li>
+            <li
+            class="w-[458px] hover:bg-[#2e2e2e46] transition-all ease-in-out items-center justify-center flex h-[118px] rounded-lg border-[#2e2e2e] border"
+            >
+            <img
+                class="rounded-full ml-6 w-[70px]"
+                src="https://unavatar.io/pedro"
+                alt=""
+            />
+            <p
+                class="text-[#979797] ml-8 flex flex-col pr-14 text-[17px] font-medium"
+            >
+                <span class="-mt-1">¿Le gustaría ponerse en contacto</span>
+                <span class="-mt-1">directamente con la dirección?</span>
+                <span class="-mt-1 text-base text-white border-white"
+                >Entonces envíame un correo electrónico</span
+                >
+                <span class="-mt-1 text-base text-white border-white cursor-pointer"
+                ><span class="border-b border-white cursor-pointer"
+                    >stev_0w0@gmail.com</span
+                ></span>
+            </p>
+            </li>
+        </ul>
+        <ul class="flex gap-3 w-[460px]">
+            <li
+            class="flex flex-col-reverse font-thin text-xs hover:bg-[#535353] cursor-pointer transition-all ease-in-out text-[#97a18d] items-center justify-center gap-1 w-[147px] h-[72px] bg-[#2e2e2e] rounded-lg"
+            >
+            Llamanos<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1.5rem"
+                height="1.5rem"
+                viewBox="0 0 24 24"
+                ><path
+                fill="currentColor"
+                d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25c1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"
+                ></path></svg>
+            </li>
+            <li
+            class="flex flex-col-reverse font-thin text-xs hover:bg-[#535353] cursor-pointer transition-all ease-in-out text-[#97a18d] items-center justify-center gap-1 w-[147px] h-[72px] bg-[#2e2e2e] rounded-lg"
+            >
+            Escribenos<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1.5rem"
+                height="1.5rem"
+                viewBox="0 0 36 36"
+                ><path
+                fill="currentColor"
+                d="M32.33 6a2 2 0 0 0-.41 0h-28a2 2 0 0 0-.53.08l14.45 14.39Z"
+                class="clr-i-solid clr-i-solid-path-1"></path><path
+                fill="currentColor"
+                d="m33.81 7.39l-14.56 14.5a2 2 0 0 1-2.82 0L2 7.5a2 2 0 0 0-.07.5v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-.12-.61M5.3 28H3.91v-1.43l7.27-7.21l1.41 1.41Zm26.61 0h-1.4l-7.29-7.23l1.41-1.41l7.27 7.21Z"
+                class="clr-i-solid clr-i-solid-path-2"></path><path
+                fill="none"
+                d="M0 0h36v36H0z"></path></svg>
+            </li>
+            <li
+            class="flex flex-col-reverse font-thin text-xs hover:bg-[#535353] cursor-pointer transition-all ease-in-out text-[#97a18d] items-center justify-center gap-1 w-[147px] h-[72px] bg-[#2e2e2e] rounded-lg"
+            >
+            Ubicanos<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1.5rem"
+                height="1.5rem"
+                viewBox="0 0 24 24"
+                ><g fill="none"
+                ><path
+                    d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"
+                ></path><path
+                    fill="currentColor"
+                    d="M20.235 5.686c.432-1.195-.726-2.353-1.921-1.92L3.709 9.048c-1.199.434-1.344 2.07-.241 2.709l4.662 2.699l4.163-4.163a1 1 0 0 1 1.414 1.414L9.544 15.87l2.7 4.662c.638 1.103 2.274.957 2.708-.241z"
+                ></path></g
+                ></svg>
+            </li>
+        </ul>
+        <ul
+            class="hover:bg-[#535353] transition-all ease-in-out flex items-center px-10 justify-between h-[82px] w-[460px] bg-[#2e2e2e] rounded-lg"
+        >
+            <li class="flex flex-col justify-center">
+            <h4 class="text-[#979797] text-[15px]">Correo electrónico</h4>
+            <p class="text-base cursor-pointer">stev_0w0@gmail.com</p>
+            </li>
+            <li
+            class="flex border-l pl-14 border-[#97979738] ml-8 flex-col justify-center"
+            >
+            <h4 class="text-[#979797] text-base">Teléfono</h4>
+            <p class="text-base cursor-pointer">+593 99 920 3644</p>
+            </li>
+        </ul>
+        </div>
+        
+        <BackgroundImgComponent className="w-[784px] bg-center rounded-lg bg-no-repeat bg-cover"
+        src="https://images.unsplash.com/photo-1570833181606-e694d0560b0c?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        </BackgroundImgComponent>
+
+    </section>
+
+    <section class="w-full px-[60px] items-center justify-center pt-10 flex h-[110vh]">
+      <BackgroundImgComponent className="w-full bg-center bg-no-repeat bg-cover relative rounded-xl mt-8 h-[90vh] border"
+        src="https://images.unsplash.com/photo-1551997476-7788a5dd3fca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <div class="flex absolute -translate-x-[50%] -translate-y-[50%] top-[15%] left-[92%] text-black items-center hover:w-24 hover:h-24 hover:bg-white transition-all ease-in-out w-20 h-20 justify-center bg-[#3e4346] rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><path fill="currentColor" d="M11.224 6.807c1.2-.835 2.036-1.415 2.694-1.753c.658-.337.96-.336 1.156-.266c.12.044.24.107.346.186c.187.139.37.417.5 1.156a.75.75 0 0 0 1.478-.26c-.15-.856-.427-1.613-1.084-2.1a2.861 2.861 0 0 0-.731-.393c-.795-.286-1.579-.053-2.35.342c-.759.39-1.678 1.03-2.818 1.823l-.251.176c-.418.29-.556.384-.698.45a1.926 1.926 0 0 1-.475.15c-.15.027-.311.03-.812.03h-.16c-1.12-.001-1.925-.002-2.64.348c-.66.322-1.284.947-1.621 1.607c-.364.712-.406 1.455-.467 2.518l-.007.128c-.021.36-.034.717-.034 1.051c0 .335.013.691.034 1.052l.007.128c.06 1.062.103 1.805.467 2.518c.337.66.962 1.285 1.621 1.607c.715.35 1.52.349 2.64.348h.16c.5 0 .662.003.812.03c.163.028.323.079.475.15c.142.066.28.159.698.45l.251.175c1.14.794 2.06 1.434 2.819 1.823c.77.396 1.554.629 2.349.343a2.86 2.86 0 0 0 .73-.393c.658-.488.934-1.245 1.085-2.1a.75.75 0 1 0-1.478-.26c-.13.74-.313 1.017-.5 1.155a1.361 1.361 0 0 1-.346.186c-.196.071-.498.072-1.156-.265c-.658-.338-1.495-.918-2.694-1.753l-.252-.176c-.35-.244-.599-.417-.872-.544a3.43 3.43 0 0 0-.846-.268c-.297-.053-.598-.053-1.016-.053h-.06c-1.348 0-1.776-.018-2.14-.196c-.358-.174-.75-.56-.944-.941c-.204-.4-.241-.811-.313-2.05A16.99 16.99 0 0 1 4.75 12c0-.298.011-.624.031-.965c.072-1.239.109-1.65.313-2.05c.194-.381.586-.767.944-.941c.364-.178.792-.196 2.14-.196h.06c.418 0 .72 0 1.016-.053c.292-.052.576-.142.846-.268c.273-.127.522-.3.872-.544z"></path><path fill="currentColor" d="M14.53 8.47a.75.75 0 0 0-1.06 1.06L15.94 12l-2.47 2.47a.75.75 0 0 0 1.06 1.06L17 13.062l2.47 2.47a.75.75 0 0 0 1.06-1.061L18.06 12l2.47-2.47a.75.75 0 1 0-1.06-1.06L17 10.94z"></path></svg>
+        </div>
+        <div class="flex absolute -translate-x-[50%] -translate-y-[50%] top-[15%] left-[83%] text-black items-center hover:w-24 hover:h-24 hover:bg-white transition-all ease-in-out w-20 h-20 justify-center bg-[#3e4346] rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2rem"height="2rem" viewBox="0 0 256 256" ><path fill="currentColor" d="M224 128a96 96 0 0 1-94.71 96H128a95.38 95.38 0 0 1-65.9-26.2a8 8 0 0 1 11-11.63a80 80 0 1 0-1.67-114.78a3 3 0 0 1-.26.25l-10.54 9.65l17 17A8 8 0 0 1 72 112H24a8 8 0 0 1-8-8V56a8 8 0 0 1 13.66-5.7L49.31 70l10.94-10A96 96 0 0 1 224 128"></path></svg>
+        </div>
+        <div class="flex absolute -translate-x-[50%] -translate-y-[50%] top-[50%] left-[50%] text-black items-center hover:w-32 hover:h-32 hover:bg-white transition-all ease-in-out w-24 h-24 justify-center bg-[#3e4346] rounded-full" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" ><path fill="currentColor" d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712" ></path></svg>
+        </div>
+      </BackgroundImgComponent>
+    </section>
+
+    <section id="mision" class="w-full grid place-content-center px-[60px] mt-28 pt-10 h-[100vh]">
+      <div class="flex flex-col items-center justify-center">
+        <div class="flex items-center justify-center gap-4">
+          <h2 class="text-6xl tracking-tighter">Nuestra Misión</h2>
+          <p class="mt-5 flex flex-col text-[3vw] text-[#fafafa83]">
+            Es empoderar a las mujeres a través de 
+          </p>
+        </div>
+        <p class="mt-5 flex flex-col text-[3vw] text-[#fafafa83]">
+          la moda, ofreciendo calzado femenino de alta calidad que combina estilo, comodidad
+          y accesibilidad. Nos comprometemos a proporcionar una experiencia de
+          compra excepcional, tanto en línea como en la tienda, que sea
+          personalizada y sin complicaciones. Nuestro objetivo es ayudar a cada
+          mujer a expresar su estilo único y sentirse segura en cada paso que da.
+          Porque nuestra moda es tu nuevo estilo de vida.
+        </p>
+      </div>
+    </section>
+
+    <BackgroundImgComponent className="w-full bg-center bg-cover bg-no-repeat flex items-center justify-start px-[60px] mt-28 pt-10 h-[110vh]"
+    src="https://images.unsplash.com/photo-1608228088998-57828365d486?q=80&w=1382&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <h2 class="text-white hover:blur-sm transition-all duration-1000 ease-in-out hover:text-[#151515] cursor-pointer text-center leading-none tracking-tighter text-[150px] font-semibold">Por que la ropa que usas te define</h2>
+    </BackgroundImgComponent>
+
+    <section id="marcas" class="w-full px-[60px] mt-40 pt-10 h-[180vh]">
+      <h2 class="flex tracking-tighter text-[#c8c8c8] gap-1 flex-col text-6xl">
+        <span>Juntos estamos</span>
+        <span>logrando grandes cosas</span>
+      </h2>
+      <Marcas_Map client:idle />
+    </section>
+
+    <section class="w-full px-[60px] items-center justify-center pt-10 flex h-[110vh]">
+      <BackgroundImgComponent className="w-full bg-bottom bg-no-repeat bg-cover relative rounded-xl -mt-0.5 h-[98vh] border"
+        src="https://images.unsplash.com/photo-1620062161349-7abc66286084?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            <h2 class="absolute -translate-x-[50%] -translate-y-[50%] top-[47%] left-[26%] flex flex-col gap-2 font-semibold leading-[60px] text-white text-[48px]">
+            <span class="-mt-4">"Joven, dinamico tipo. I </span>
+            <span class="-mt-4">Creer en Ti. Y sentir estas</span>
+            <span class="-mt-4">Increiblemente fuerte</span>
+            <span class="-mt-4">Tienes consiguio él."</span>
+            </h2>
+            <div class="flex absolute -translate-x-[50%] -translate-y-[50%] top-[15%] left-[92%] text-black items-center hover:w-24 hover:h-24 hover:bg-white transition-all ease-in-out w-20 h-20 justify-center bg-[#3e4346] rounded-full" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" ><path fill="currentColor" d="M11.224 6.807c1.2-.835 2.036-1.415 2.694-1.753c.658-.337.96-.336 1.156-.266c.12.044.24.107.346.186c.187.139.37.417.5 1.156a.75.75 0 0 0 1.478-.26c-.15-.856-.427-1.613-1.084-2.1a2.861 2.861 0 0 0-.731-.393c-.795-.286-1.579-.053-2.35.342c-.759.39-1.678 1.03-2.818 1.823l-.251.176c-.418.29-.556.384-.698.45a1.926 1.926 0 0 1-.475.15c-.15.027-.311.03-.812.03h-.16c-1.12-.001-1.925-.002-2.64.348c-.66.322-1.284.947-1.621 1.607c-.364.712-.406 1.455-.467 2.518l-.007.128c-.021.36-.034.717-.034 1.051c0 .335.013.691.034 1.052l.007.128c.06 1.062.103 1.805.467 2.518c.337.66.962 1.285 1.621 1.607c.715.35 1.52.349 2.64.348h.16c.5 0 .662.003.812.03c.163.028.323.079.475.15c.142.066.28.159.698.45l.251.175c1.14.794 2.06 1.434 2.819 1.823c.77.396 1.554.629 2.349.343a2.86 2.86 0 0 0 .73-.393c.658-.488.934-1.245 1.085-2.1a.75.75 0 1 0-1.478-.26c-.13.74-.313 1.017-.5 1.155a1.361 1.361 0 0 1-.346.186c-.196.071-.498.072-1.156-.265c-.658-.338-1.495-.918-2.694-1.753l-.252-.176c-.35-.244-.599-.417-.872-.544a3.43 3.43 0 0 0-.846-.268c-.297-.053-.598-.053-1.016-.053h-.06c-1.348 0-1.776-.018-2.14-.196c-.358-.174-.75-.56-.944-.941c-.204-.4-.241-.811-.313-2.05A16.99 16.99 0 0 1 4.75 12c0-.298.011-.624.031-.965c.072-1.239.109-1.65.313-2.05c.194-.381.586-.767.944-.941c.364-.178.792-.196 2.14-.196h.06c.418 0 .72 0 1.016-.053c.292-.052.576-.142.846-.268c.273-.127.522-.3.872-.544z" ></path><path fill="currentColor" d="M14.53 8.47a.75.75 0 0 0-1.06 1.06L15.94 12l-2.47 2.47a.75.75 0 0 0 1.06 1.06L17 13.062l2.47 2.47a.75.75 0 0 0 1.06-1.061L18.06 12l2.47-2.47a.75.75 0 1 0-1.06-1.06L17 10.94z" ></path></svg>
+            </div>
+            <div class="flex absolute -translate-x-[50%] -translate-y-[50%] top-[15%] left-[83%] text-black items-center hover:w-24 hover:h-24 hover:bg-white transition-all ease-in-out w-20 h-20 justify-center bg-[#3e4346] rounded-full" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 256 256" ><path fill="currentColor" d="M224 128a96 96 0 0 1-94.71 96H128a95.38 95.38 0 0 1-65.9-26.2a8 8 0 0 1 11-11.63a80 80 0 1 0-1.67-114.78a3 3 0 0 1-.26.25l-10.54 9.65l17 17A8 8 0 0 1 72 112H24a8 8 0 0 1-8-8V56a8 8 0 0 1 13.66-5.7L49.31 70l10.94-10A96 96 0 0 1 224 128" ></path></svg>
+            </div>
+            <ul class="absolute -translate-x-[50%] -translate-y-[50%] bottom-0 left-[50%] flex items-center justify-center gap-4" >
+            <li class="w-[290px]  pl-3 gap-4 glassphromismo h-[85px] transition-all ease-in-out cursor-pointer duration-500  items-center flex rounded-lg" >
+                <img class="rounded-full p-2 border border-gray-600 w-[60px]" src="https://unavatar.io/pedro" alt="" />
+                <p class="flex flex-col text-sm font-medium">
+                <span class="-mt-1 ">Steven J Sanchez</span>
+                <span class="-mt-1 text-[13px] text-[#938886] uppercase" >Desarrollador Fullstack</span>
+                </p>
+            </li>
+            <li class="w-[290px] pl-3 gap-4 glassphromismo h-[85px] transition-all ease-in-out cursor-pointer duration-500  items-center flex rounded-lg" >
+                <img
+                class="rounded-full p-2 border border-gray-600 w-[60px]"
+                src="https://unavatar.io/pedro"
+                alt=""
+                />
+                <p class="flex flex-col text-sm font-medium">
+                <span class="-mt-1 ">Steven J Sanchez</span>
+                <span class="-mt-1 text-[13px] text-[#938886] uppercase"
+                    >Desarrollador Fullstack</span
+                >
+                </p>
+            </li>
+            <li class="w-[290px] pl-3 gap-4 glassphromismo h-[85px] transition-all ease-in-out cursor-pointer duration-500  items-center flex rounded-lg" >
+                <img class="rounded-full p-2 border border-gray-600 w-[60px]" src="https://unavatar.io/pedro" alt=""/>
+                <p class="flex flex-col text-sm font-medium">
+                <span class="-mt-1 ">Steven J Sanchez</span>
+                <span class="-mt-1 text-[13px] text-[#938886] uppercase">Desarrollador Fullstack</span>
+                </p>
+            </li>
+            </ul>
+      </BackgroundImgComponent>
+    </section>
+
+    <section id="vision" class="w-full grid px-[60px] place-content-center mt-28 pt-10 h-[100vh]">
+      <div class="flex flex-col items-center justify-center">
+        <div class="flex items-center justify-center gap-4">
+          <h2 class="text-6xl">Nuestra Visión</h2>
+          <p class="mt-5 flex flex-col text-[3vw] text-[#fafafa83]">
+            Nuestra visión es convertirnos en la marca de
+          </p>
+        </div>
+        <p class="mt-5 flex flex-col text-[3vw] text-[#fafafa83]">
+          calzado femenino de referencia a nivel nacional e internacional,
+          reconocida por nuestra calidad, innovación y compromiso con la
+          satisfacción del cliente. Aspiramos a ser líderes en la industria del
+          calzado, estableciendo nuevas tendencias y elevando el estándar de lo
+          que las mujeres pueden esperar de su calzado. A través de nuestras
+          prácticas de negocio sostenibles y éticas, buscamos hacer una diferencia
+          positiva en la industria de la moda.
+        </p>
+      </div>
+    </section>
+
+    <section id="noticias"class="w-full grid gap-8 justify-center px-[60px] mt-28 pt-10 h-[100vh]">
+      <h2 class="flex tracking-tighter text-[#c8c8c8] gap-1 flex-col text-6xl">
+        <span>Ultimas noticias del</span>
+        <span>mundo fashion de SABATA</span>
+      </h2>
+      <CarouselSizeContactFooter client:idle />
+    </section>
+
+    <footer id="gracias" class="w-full gap-20 flex flex-col bg-[#272727] px-[60px] mt-28 pt-10 h-[100vh]">
+      <h2 class="text-white hover:blur-sm transition-all duration-1000 ease-in-out hover:text-[#151515] cursor-pointer text-center leading-none tracking-tighter text-[150px] font-semibold">
+        Gracias por visitar nuestro sitio
+      </h2>
+
+      <ul class="w-full px-4  gap-x-8 items-center justify-between flex">
+        <li class="cursor-pointe text-sm ">
+          <a href="/"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="p-0 m-0 icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></a>
+        </li>
+        <li class="cursor-pointe text-sm ">
+          <a href="#intro">Inicio</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#nosotros">Sobre Nosotros</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#contacto">Contacto</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#mision">Misión</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#marcas">Nuestras marcas</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#vision">Visión</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#noticias">Noticias</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#gracias">Gracias</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="/es/auth/login"> <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-square-rounded"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" /><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /><path d="M6 20.05v-.05a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v.05" /></svg></a>
+        </li>
+      </ul>
+
+      <p class="text-center">@Copyright 2024 SABATA</p>
+      <!-- <section class="flex items-center justify-center w-full h-dvh">
+        <div class="flex gap-4">
+            <img class="w-[200px]" src="https://framerusercontent.com/images/ezXAxEXo9rzaI0hhHkp1oIcpFD0.png" alt="">
+            <img class="w-[200px]" src="https://framerusercontent.com/images/KEvhI0NCdrBeoFy2w6Zup0BHKoY.png?scale-down-to=512 " alt="">
+            <img class="w-[200px]" src="https://framerusercontent.com/images/ezXAxEXo9rzaI0hhHkp1oIcpFD0.png" alt="">
+            <img class="w-[200px]" src="https://framerusercontent.com/images/lZEuk6Yf4LUCJuzAKjbIEiTqwA4.png?scale-down-to=512" alt="">
+        </div>
+      </section> -->
+    </footer>
+
+    
+  </main>
+</Contact_Layout>
+
+<style>
+  body {
+    font-family: "Cabin Variable", sans-serif;
+  }
+  .text_animation_h2 {
+    white-space: nowrap;
+    padding: 0.15em 0.5em;
+    display: inline-block;
+    transform: translateY(0%) scaleY(1.1);
+  }
+
+  .glassphromismo {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glassphromismo:hover {
+    background-color: white; 
+    color: black;
+
+  }
+</style>

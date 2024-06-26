@@ -1,5 +1,16 @@
 <div class="flex items-center gap-5">
-  <a href="/" data-astro-prefetch="tap" class="tracking-[5px]">SABATA</a>
+  <a href="/" id="toHome" data-astro-prefetch="tap" class="tracking-[5px]">SABATA</a>
   <div class="w-[2px] h-[15px] bg-black"></div>
   <p class="tracking-[2px]">REGISTRAR NUEVA CUENTA</p>
 </div>
+
+
+<script>
+
+  const googleSignin = document.querySelector("#toHome") as HTMLButtonElement
+
+  googleSignin.addEventListener("click", () => {
+    window.location.href = "/"
+  })
+
+</script>

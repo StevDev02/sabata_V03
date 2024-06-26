@@ -1,6 +1,5 @@
 ---
 // Components React
-import { Button } from "@/components/ui/button";
 
 // Custom Icons
 import { GoogleIcon } from "@/components/custom/Icons/Google";
@@ -13,14 +12,8 @@ import { FacebookIcon } from "@/components/custom/Icons/Facebook";
     Registrate y unete a la comunidad de sabata
   </h2>
   <p class="text-sm text-center">
-    Si ya te registraste, puedes <a
-      class="text-[#ef7674] font-semibold hover:underline"
-      target="_blank"
-      rel="noopener noreferrer"
-      href="/login"
-      title="Iniciar Sesion | Sabata"
-      aria-label="Iniciar Sesion | Sabata">iniciar sesion con correo</a
-    > y navegar en nuestra comunidad.
+    Si ya te registraste, puedes <a data-astro-prefetch="tap" id="toLoginText" href="/es/auth/login"
+      class="text-[#ef7674] cursor-pointer font-semibold hover:underline">iniciar sesion con correo</a> y navegar en nuestra comunidad.
   </p>
   <div class="bg_text_login -z-0"></div>
   <div class="bg_text_login2 -z-0"></div>
@@ -32,28 +25,27 @@ import { FacebookIcon } from "@/components/custom/Icons/Facebook";
     </div>
   </div>
   <div class="flex items-center justify-center gap-4">
-    <a
-      href="/login"
+    <button
       title="Iniciar Sesion con Google | Sabata"
       aria-label="Iniciar Sesion con Google | Sabata"
-    >
-      <Button
-        title="Iniciar Sesion con Google | Sabata"
-        aria-label="Iniciar Sesion con Google | Sabata"
-        className="bg-white rounded-sm shadow-md"
-      >
-        <GoogleIcon />
-      </Button>
-    </a>
-    <a
-      class="hidden"
-      href="/login"
-      title="Iniciar Sesion con Facebook | Sabata"
-      aria-label="Iniciar Sesion con Facebook | Sabata"
-    >
-      <Button className="bg-white rounded-sm shadow-md">
-        <FacebookIcon />
-      </Button>
-    </a>
+      id="google" class="bg-white  p-2 border rounded-full shadow-md">
+      <GoogleIcon />
+    </button>
+    <button
+      title="Iniciar Sesion con Google | Sabata"
+      aria-label="Iniciar Sesion con Google | Sabata"
+      id="google" class="bg-white  p-2 border rounded-full shadow-md">
+      <FacebookIcon />
+    </button>
   </div>
 </div>
+
+<script>
+
+  const googleSignin = document.querySelector("#toLoginText") as HTMLButtonElement
+
+  googleSignin.addEventListener("click", () => {
+    window.location.href = "/es/auth/login"
+  })
+
+</script>

@@ -1,10 +1,10 @@
 ---
 // Components Astro
-import Login_Layout from "../layout/Layout.astro";
+import Login_Layout from "../../../layout/Layout.astro";
 // Sections
 import Login_Page from "@/components/auth/login/Login_Page.astro";
 // Firebase
-import { app } from "../firebase/server";
+import { app } from "../../../firebase/server";
 import { getAuth } from "firebase-admin/auth";
 
 
@@ -35,17 +35,16 @@ try {
 </Login_Layout>
 
 <script>
+  import { app } from "@/firebase/client";
   import {
-    getAuth,
-    inMemoryPersistence,
-    signInWithEmailAndPassword,
-    GoogleAuthProvider,
-    signInWithPopup,
+      getAuth,
+      inMemoryPersistence,
+      signInWithEmailAndPassword,
+      GoogleAuthProvider,
+      signInWithPopup,
   } from "firebase/auth";
-  import { app } from "../firebase/client";
 
   const auth = getAuth(app);
-  // This will prevent the browser from storing session data
   auth.setPersistence(inMemoryPersistence);
 
   const form = document.querySelector("form") as HTMLFormElement;
