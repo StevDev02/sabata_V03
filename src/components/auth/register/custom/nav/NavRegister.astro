@@ -6,12 +6,43 @@ import NavOptionsRegister from "./NavOptionsRegister.astro";
 
 <nav class="flex items-center justify-between w-full py-5 text-sm px-14">
   <LogoNavRegister />
-  <ul class="flex items-center justify-between p-1 gap-7">
-    <li class="flex gap-10">
-      <a class="link_login" data-astro-prefetch="tap" href="">Accesorio</a>
-      <a class="link_login" data-astro-prefetch="tap" href="">Ofertas </a>
-      <a class="link_login" data-astro-prefetch="tap" href="">Contacto</a>
+  <ul class="">
+    <li class="flex place-content-center gap-20">
+      <a class="link_login relative" data-astro-prefetch="tap" href="">Accesorio</a>
+      <a class="link_login" data-astro-prefetch="tap" href="">Tienda </a>
+      <a class="link_login" data-astro-prefetch="tap" id="toContact">Contacto</a>
     </li>
   </ul>
   <NavOptionsRegister />
 </nav>
+
+<style>
+
+  .link_login {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .link_login:hover:after{
+    content: "";
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    bottom: -2px; 
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: #ef7674;
+    transition: width 0.3s ease-in-out;
+  }
+</style>
+
+
+<script>
+
+  const googleSignin = document.querySelector("#toContact") as HTMLButtonElement
+
+  googleSignin.addEventListener("click", () => {
+    window.location.href = "/es/contact"
+  })
+
+</script>

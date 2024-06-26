@@ -1,5 +1,3 @@
-import { useState, type SetStateAction } from "react";
-
 // React Radix Icons
 import { InfoCircledIcon } from "@radix-ui/react-icons";
 
@@ -15,6 +13,7 @@ import { FacebookIcon } from "@/components/custom/Icons/Facebook";
 export function Login_Form() {
   return (
     <>
+      <div>
       <form
         className="flex flex-col gap-4 pt-10 text-xs text-zinc-600"
         action="/api/auth/login"
@@ -68,32 +67,28 @@ export function Login_Form() {
         >
           INICIAR SESION
         </Button>
-
-        <div className="flex items-center justify-center gap-2 pt-3 pb-3">
+      </form>
+      <div className="flex items-center justify-center gap-2 pt-3 pb-3">
           <div className="w-[110px] h-[1px] bg-[#00000018] " />{" "}
           <label className="text-xs text-[#00000080] ">O inicia con</label>
           <div className="w-[110px] h-[1px] bg-[#00000018] " />
         </div>
         <div className="flex items-center justify-center gap-4">
-          <Button
+          <button
             title="Iniciar Sesion con Google | Sabata"
             aria-label="Iniciar Sesion con Google | Sabata"
-            id="google"
-            className="bg-white rounded-sm shadow-md"
-          >
+            id="google" className="bg-white  p-2 border rounded-full shadow-md">
             <GoogleIcon />
-          </Button>
-          <Button
-            disabled
+          </button>
+          
+          <button
             title="Iniciar Sesion con Facebook | Sabata"
             aria-label="Iniciar Sesion con Facebook | Sabata"
-            id="facebook"
-            className="hidden bg-white rounded-sm shadow-md"
-          >
+            id="facebook" className=" bg-white  p-2 border rounded-full shadow-md">
             <FacebookIcon />
-          </Button>
+          </button>
         </div>
-      </form>
+      </div>
     </>
   );
 }
