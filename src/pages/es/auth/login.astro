@@ -4,25 +4,25 @@ import Login_Layout from "../../../layout/Layout.astro";
 // Sections
 import Login_Page from "@/components/auth/login/Login_Page.astro";
 // Firebase
-import { app } from "../../../firebase/server";
-import { getAuth } from "firebase-admin/auth";
+// import { app } from "../../../firebase/server";
+// import { getAuth } from "firebase-admin/auth";
 
 
-const auth = getAuth(app);
-const sessionCookieObj = Astro.cookies.get("__session");
+// const auth = getAuth(app);
+// const sessionCookieObj = Astro.cookies.get("__session");
 
-try {
-  if (sessionCookieObj) {
-    const sessionCookie = sessionCookieObj.value;
-    const decodedCookie = await auth.verifySessionCookie(sessionCookie);
-    if (decodedCookie) {
-      return Astro.redirect("/es/shop");
-    }
-  }
-} catch (error) {
-  console.error("Error verifying login session:", error);
-  return Astro.redirect("/login");
-}
+// try {
+//   if (sessionCookieObj) {
+//     const sessionCookie = sessionCookieObj.value;
+//     const decodedCookie = await auth.verifySessionCookie(sessionCookie);
+//     if (decodedCookie) {
+//       return Astro.redirect("/es/shop");
+//     }
+//   }
+// } catch (error) {
+//   console.error("Error verifying login session:", error);
+//   return Astro.redirect("es/auth/login");
+// }
 ---
 
 <Login_Layout

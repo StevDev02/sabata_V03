@@ -1,9 +1,10 @@
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Verify that the DOM elements exist before creating ScrollTriggers
+
 const footer = document.querySelector(".footer_scroll_home");
 const navegacion_home = document.querySelector(".navegacion_home");
 const header = document.querySelector(".header_scroll_home");
@@ -31,14 +32,14 @@ if (footer && navegacion_home && header) {
         },
     });
 
-    gsap.utils.toArray(".cards_scroll_home").forEach((panel) => {
-        if (panel instanceof HTMLElement) {
-            ScrollTrigger.create({
-                trigger: panel,
-                start: "top top",
-                pin: true,
-                pinSpacing: false,
-            });
-        }
+    const sections = document.querySelectorAll<HTMLElement>("section");
+    sections.forEach((section, index) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: "+=100%",
+        pin: true,
+        pinSpacing: false
+      });
     });
 }
