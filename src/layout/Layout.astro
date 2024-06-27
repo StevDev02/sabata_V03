@@ -10,6 +10,7 @@ import { ViewTransitions } from "astro:transitions";
 // Fonts
 
 import "@fontsource-variable/cabin";
+import '@fontsource/poppins';
 
 interface Props {
   title_page: string;
@@ -37,6 +38,11 @@ const { title_page, description_page, keywords_page, last_update } =
     <!-- SLOT -->
     <slot />
     <!-- SLOT -->
+     <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+     </style>
     <script src="../library/preline.js"></script>
   </body>
 </html>

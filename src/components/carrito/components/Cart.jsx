@@ -64,10 +64,10 @@ export function CartShop() {
                             </div>
                             <div className="mt-6 gap-2 flex justify-center text-center text-sm text-gray-500">
                                 <p> or </p>
-                                <button type="button" className="font-medium text-blue-500 hover:text-blue-700">
+                                <a href="/es/cart" type="button" className="font-medium text-blue-500 hover:text-blue-700">
                                     Revisar carrito
                                     <span aria-hidden="true"> &rarr;</span>
-                                </button>
+                                </a>
                             </div>
                             </div>
                         </div>

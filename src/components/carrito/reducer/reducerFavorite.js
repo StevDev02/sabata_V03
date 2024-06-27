@@ -3,7 +3,7 @@ const isBrowser = typeof window !== 'undefined';
 
 function getInitialFavoriteState() {
     if (!isBrowser) return [];
-    
+
     const storedFavorites = window.localStorage.getItem('favorite');
     try {
         if (storedFavorites) {
@@ -30,10 +30,11 @@ export const updateLocalStorage = (state) => {
             console.error('Error saving data to localStorage for favorite.', error);
         }
     }
-}
+};
 
 export const FavoriteReducer = (state, action) => {
     const { type: actionType, payload: actionPayload } = action;
+
     switch (actionType) {
         case 'ADD_TO_FAVORITE': {
             const { id } = actionPayload;
@@ -58,4 +59,4 @@ export const FavoriteReducer = (state, action) => {
         default:
             return state;
     }
-}
+};

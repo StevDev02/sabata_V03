@@ -1,11 +1,10 @@
 ---
-// Components Astro
-import LogoNavRegister from "./LogoNavRegister.astro";
-import NavOptionsRegister from "./NavOptionsRegister.astro";
+import LogoNavCart from "./LogoNavCart.astro"
+import NavOptionsCart from "./NavOptionsCart.astro"
 ---
 
 <nav class="flex items-center justify-between w-full py-5 text-sm px-14">
-  <LogoNavRegister />
+  <LogoNavCart />
   <ul class="">
     <li class="flex place-content-center gap-20">
       <a class="link_login relative" data-astro-prefetch="tap" href="">Accesorio</a>
@@ -13,7 +12,7 @@ import NavOptionsRegister from "./NavOptionsRegister.astro";
       <a class="link_login" data-astro-prefetch="tap" id="toContact">Contacto</a>
     </li>
   </ul>
-  <NavOptionsRegister />
+  <NavOptionsCart />
 </nav>
 
 <style>
@@ -34,8 +33,8 @@ import NavOptionsRegister from "./NavOptionsRegister.astro";
     background-color: #ef7674;
     transition: width 0.3s ease-in-out;
   }
-</style>
 
+</style>
 
 <script>
 
