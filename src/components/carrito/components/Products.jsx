@@ -1,12 +1,13 @@
 
 import { useCart } from '../hooks/useCart.js'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useFavorite } from '../hooks/useFavorite.js';
 
 
 export function ProductsShoopingCart({ products }) {
     const { addToCart, cart, clearFromCart } = useCart()
     const { addToFavorite, favorite } = useFavorite();
+
 
     const checkedProductInCart = (product) => {
         return cart.some(item => item.id === product.id);
@@ -69,6 +70,9 @@ export function ProductsShoopingCart({ products }) {
             </li>
         );
     };
+
+    
+    
 
     return ( 
         <>

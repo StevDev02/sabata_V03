@@ -32,12 +32,12 @@ if (footer && navegacion_home && header) {
         },
     });
 
-    const sections = document.querySelectorAll<HTMLElement>("section");
+    const sections = document.querySelectorAll<HTMLElement>(".section");
     sections.forEach((section, index) => {
       ScrollTrigger.create({
         trigger: section,
         start: "top top",
-        end: "+=100%",
+        end: "+=150%",
         pin: true,
         pinSpacing: false
       });

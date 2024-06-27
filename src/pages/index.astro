@@ -31,32 +31,20 @@ import { Nav_Home } from "@/components/home/custom/components/nav/Nav_Home";
       <Nav_Home client:idle/>
       <div class="flex gap-4 place-content-center">
           <a id="toLogin" href="/es/auth/login" data-astro-prefetch="tap"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-anecap="round"  stroke-anejoin="round"  class="icon icon-tabler icons-tabler-outane icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg></a>
-          <a><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-anecap="round"  stroke-anejoin="round"  class="icon icon-tabler icons-tabler-outane icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></a>
-          <a><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-anecap="round"  stroke-anejoin="round"  class="icon icon-tabler icons-tabler-outane icon-tabler-shopping-bag-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.5 21h-2.926a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304h11.339a2 2 0 0 1 1.977 2.304c-.057 .368 -.1 .644 -.127 .828" /><path d="M9 11v-5a3 3 0 0 1 6 0v5" /><path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" /></svg></a>
+          <a href="/es/cart" data-astro-prefetch="tap"><svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-anecap="round"  stroke-anejoin="round"  class="icon icon-tabler icons-tabler-outane icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></a>
+          <a href="/es/contact#contacto" data-astro-prefetch="tap"><svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-help"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 17l0 .01" /><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" /></svg></a>
       </div>
   </nav>
   <main class="relative bg-black">
-    <section id="one"  class="header_scroll_home">
+    <section  class="header_scroll_home section">
       <IntroPage />
     </section>
-    <section id="two">
       <WomenFashionPage />
-    </section>
-    <section id="three">
       <SummerOfferPage />
-    </section>
-    <section id="four">
       <DiscountProductsPage />
-    </section>
-    <section id="five">
       <LifeStylePage />
-    </section>
-    <section id="six" class="navegacion_home">
       <CollectionPage />
-    </section>
-    <section class="footer_scroll_home" id="seven">
       <Footer />
-    </section>
   </main>
 </Home>
 
@@ -66,11 +54,6 @@ import { Nav_Home } from "@/components/home/custom/components/nav/Nav_Home";
     -webkit-backdrop-filter: blur(2px) saturate(97%);
     background-color: rgba(1, 1, 1, 0.05);
   }
-  html,
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-  
 </style>
 
 <script src="../animations/useScrollHome.ts" ></script>

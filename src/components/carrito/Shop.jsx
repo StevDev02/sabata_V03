@@ -4,15 +4,14 @@ import { CartProvider } from "./context/cart";
 import { NavBar } from "./components/NavBar";
 import { FavoriteProvider } from "./context/favorite";
 import { useFilters } from "./hooks/useFilters";
-// import { useEffect, useState } from "react";
-// import { collection, onSnapshot  } from "firebase/firestore";
-// import { projectAuth } from "@/firebase/client";
+import { useEffect, useState } from "react";
 
 
 export function Shop() {
 
     // const [initialProducts, setInitialProducts] = useState()
     const { filterProducts } = useFilters()
+    const [isLink, setIsLink] = useState(false);
 
     // useEffect(() => {
     //     const unsubscribe = onSnapshot(collection(projectAuth, "products"), (snapshot) => {
@@ -28,11 +27,18 @@ export function Shop() {
 
     const filteredProducts = filterProducts(InitialProducts)
 
+    useEffect(() => {
+        // Verificamos si la URL es /cart cuando el componente está montado en el cliente
+        const url = new URL(window.location.href);
+        const checkIsCart = url.pathname.endsWith('/cart');
+        setIsLink(checkIsCart)
+      }, []);
+
     return ( 
         <>
             <CartProvider>
                 <FavoriteProvider>
-                    <nav className="w-full py-4 relative ">
+                    <nav className="w-full py-4 px-8 relative ">
                         <NavBar />
                     </nav>
                     <main className="w-full mt-0 grid place-content-center">

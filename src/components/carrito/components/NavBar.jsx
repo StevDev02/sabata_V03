@@ -62,7 +62,7 @@ export function NavBar() {
 
                     <div className="flex items-center gap-x-2">
                         
-                        <button className="text-xs mr-1 uppercase">Iniciar Sesion</button>
+                        <a href="/es/auth/login" className="text-xs mr-1 uppercase">Iniciar Sesion</a>
                     
                         <button className="w-[30px] h-[30px] rounded-full shadow-md grid place-content-center ">
                             {showFavorite ?

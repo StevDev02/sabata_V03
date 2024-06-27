@@ -11,7 +11,7 @@ const backgroundVariants = cva(
       variants: {
          variant: {
             responsive: "w-auto h-auto",
-            default: "w-full h-dvh",
+            default: "w-full h-[120dvh]",
          },
       },
       defaultVariants: {

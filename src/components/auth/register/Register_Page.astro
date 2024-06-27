@@ -6,13 +6,13 @@ import NavRegister from "./custom/nav/NavRegister.astro";
 import { RegisterForm } from "./RegisterForm";
 // Styles
 import "./Register.module.css";
+import { BackgroundImgComponent } from "@/components/custom/Image/BackgroundImgComponent";
 ---
 
 <!-- Register Page -->
-<main
-  class="absolute w-full bg-center bg-no-repeat bg-cover h-dvh bg_login_img"
-  style="background-image: url(https://firebasestorage.googleapis.com/v0/b/sabata-auth.appspot.com/o/bg_login.webp?alt=media&token=acee35c1-2657-477e-86da-b06177f057cb)"
->
+<BackgroundImgComponent
+  className="w-full bg-center bg-no-repeat bg-cover h-[100dvh] "
+  src="https://firebasestorage.googleapis.com/v0/b/sabata-auth.appspot.com/o/bg_login.webp?alt=media&token=acee35c1-2657-477e-86da-b06177f057cb">
   <header>
     <NavRegister />
   </header>
@@ -22,4 +22,4 @@ import "./Register.module.css";
     <RegisterForm client:idle />
     <RegisterOptionText />
   </section>
-</main>
+</BackgroundImgComponent>

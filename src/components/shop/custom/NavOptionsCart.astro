@@ -1,0 +1,40 @@
+<ol>
+  <li class="flex items-center gap-5">
+    <a class="cursor-default">Español</a>
+    <a href="" class="link_login" >Iniciar sesion</a>
+    <a class="text-sm text-[#fafafa] bg-[#ef7674] px-4 py-1 hover:text-[#ef7674] rounded-3xl hover:bg-[#fff]" href="/es/auth/register" id="toRegister">Registrarse</a>
+  </li>
+</ol>
+
+<style>
+
+  .link_login {
+    position: relative;
+  }
+  .link_login::after{
+    content: "";
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    bottom: -2px; 
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: #ef7674;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .link_login:hover::after{
+    width: 100%;
+  }
+
+</style>
+
+<script>
+
+  const googleSignin = document.querySelector("#toRegister") as HTMLButtonElement
+
+  googleSignin.addEventListener("click", () => {
+    window.location.href = "/es/auth/register"
+  })
+
+</script>
