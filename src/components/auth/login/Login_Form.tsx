@@ -68,12 +68,12 @@ export function Login_Form() {
           INICIAR SESION
         </Button>
       </form>
-      <div className="flex items-center justify-center gap-2 pt-3 pb-3">
+        <div className="flex mt-3 items-center justify-center gap-2 pt-3 pb-3">
           <div className="w-[110px] h-[1px] bg-[#00000018] " />{" "}
           <label className="text-xs text-[#00000080] ">O inicia con</label>
           <div className="w-[110px] h-[1px] bg-[#00000018] " />
         </div>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center mt-1 justify-center gap-4">
           <button
             title="Iniciar Sesion con Google | Sabata"
             aria-label="Iniciar Sesion con Google | Sabata"

@@ -14,10 +14,10 @@ if (footer && navegacion_home && header) {
         trigger: footer,
         start: "top 10%",
         onEnter: () => {
-            navegacion_home.classList.add("hidden");
+            navegacion_home.classList.remove("blur_menu");
         },
         onLeaveBack: () => {
-            navegacion_home.classList.remove("hidden");
+            navegacion_home.classList.add("blur_menu");
         },
     });
 

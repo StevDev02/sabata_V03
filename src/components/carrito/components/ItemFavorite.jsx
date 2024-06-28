@@ -5,7 +5,7 @@ export function ItemFavorite({ title, image_one, category, clearFromFavorite }) 
         <>
             <li className="flex relative items-center py-7">
                 <div className="h-[49px] w-[49px] flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                    <img src={image_one} alt={category} />
+                    <img loading="lazy" src={image_one} alt={category} />
                 </div>
 
                 <div className="ml-4 text-start">

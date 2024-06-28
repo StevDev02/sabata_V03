@@ -77,7 +77,7 @@ export function Marcas_Map() {
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <img alt={marca.name} src={marca.link} loading="lazy" />
+                        <img loading="lazy" alt={marca.name} src={marca.link} loading="lazy" />
                     </li>
                 ))}
             </ul>

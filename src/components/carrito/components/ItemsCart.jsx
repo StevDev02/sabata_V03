@@ -7,7 +7,7 @@ export function ItemsCart({ title, priceTotal, image_one, quantity, addToCart, c
         <>
             <li className="flex relative py-4">
                 <div className="h-24 shadow w-24 flex-shrink-0 overflow-hidden">
-                    <img src={image_one} alt={title} className="h-full w-full object-cover object-center" />
+                    <img loading="lazy" src={image_one} alt={title} className="h-full w-full object-cover object-center" />
                 </div>
 
                 <div className="ml-4 flex  flex-col">

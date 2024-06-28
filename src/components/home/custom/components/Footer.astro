@@ -1,64 +1,50 @@
----
-import "@/components/home/sections/collection/Collection.module.css";
----
+<footer  class="h-[100vh] text-white relative footer_scroll_home section bg-[#232323]">
 
-<footer  class="h-[100vh] footer_scroll_home section bg-white">
-  <div class="flex flex-col items-center justify-center text-center">
-    <h4 class="text-lg font-semibold text-black">Please Help Me</h4>
-    <a href="/shop/about-contact" class="list_hover">CONTACT</a>
-    <a href="/faq.html" class="list_hover">FAQ</a>
-    <a href="/shop/store-locator" class="list_hover">STORE LOCATOR</a>
-    <a href="/shop/user-registration?URL=" class="list_hover">NEW USERS</a>
-    <a href="/shop/order-status" class="list_hover">ORDER STATUS</a>
-  </div>
+        <img class=" absolute translate-y-[-50%] translate-x-[-50%] left-[25%] top-[40%] object-cover w-[15%]" src="https://i.ibb.co/qyfvSgk/logo-sabata-S-removebg-preview.png" alt="">
 
-  <div class="flex flex-col items-center justify-center text-center">
-    <h4 class="text-lg font-semibold text-black">Please Help Me</h4>
-    <a href="/shop/about-contact" class="list_hover">CONTACT</a>
-    <a href="/faq.html" class="list_hover">FAQ</a>
-    <a href="/shop/store-locator" class="list_hover">STORE LOCATOR</a>
-    <a href="/shop/user-registration?URL=" class="list_hover">NEW USERS</a>
-    <a href="/shop/order-status" class="list_hover">ORDER STATUS</a>
-  </div>
+    <h2 class="absolute w-[50%] translate-y-[-50%] translate-x-[-50%] left-[60%] top-[40%] text-white  transition-all duration-1000 ease-in-out cursor-pointer text-center leading-none tracking-tighter text-[100px] font-semibold">
+        Gracias por visitar nuestro sitio
+      </h2>
 
-  <div class="flex flex-col items-center justify-center text-center">
-    <h4 class="text-lg font-semibold text-black">Please Help Me</h4>
-    <a href="/shop/about-contact" class="list_hover">CONTACT</a>
-    <a href="/faq.html" class="list_hover">FAQ</a>
-    <a href="/shop/store-locator" class="list_hover">STORE LOCATOR</a>
-    <a href="/shop/user-registration?URL=" class="list_hover">NEW USERS</a>
-    <a href="/shop/order-status" class="list_hover">ORDER STATUS</a>
-  </div>
-
-  <div class="flex flex-col items-center justify-center text-center">
-    <h4 class="text-lg font-semibold text-black">Please Help Me</h4>
-    <a href="/shop/about-contact" class="list_hover">CONTACT</a>
-    <a href="/faq.html" class="list_hover">FAQ</a>
-    <a href="/shop/store-locator" class="list_hover">STORE LOCATOR</a>
-    <a href="/shop/user-registration?URL=" class="list_hover">NEW USERS</a>
-    <a href="/shop/order-status" class="list_hover">ORDER STATUS</a>
-  </div>
+      <ul class="absolute translate-y-[-50%] translate-x-[-50%] left-[50%] top-[75%] w-full px-40 gap-x-8 items-center justify-between flex">
+        <li class="cursor-pointe text-sm ">
+          <a href="#intro">Inicio</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#nosotros">Sobre Nosotros</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#contacto">Contacto</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#mision">Misión</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#marcas">Nuestras marcas</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#vision">Visión</a>
+        </li>
+        <li class="cursor-pointer text-sm ">
+          <a href="#noticias">Noticias</a>
+        </li>
+      </ul>
+    <div class="text-[11px] absolute translate-y-[-50%] translate-x-[-50%] left-[50%] top-[80%] mt-10 gap-10 grid place-content-center">
+      <ul class="flex place-content-center gap-x-4">
+        <li>TIKTOK</li>
+        <li>INSTAGRAM</li>
+        <li>FACEBOOK</li>
+        <li>X</li>
+        <li>PINTEREST</li>
+        <li>YOUTUBE</li>
+        <li>SPOTIFY</li>
+      </ul>
+    </div>
+    <div class="text-[10px] absolute translate-y-[-50%] translate-x-[-50%] left-[50%] bottom-5">
+      <ul class="flex gap-x-4">
+        <li>CONFIGURACIÓN DE COOKIES</li>
+        <li>POdivTICA DE PRIVACIDAD Y COOKIES</li>
+        <li>CONDICIONES DE COMPRA</li>
+      </ul>
+    </div>
 </footer>
-
-<style>
-  .list_hover {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  .list_hover::after {
-    content: "";
-    width: 80%;
-    height: 1px;
-    transform: translateX(-50%);
-    background: #000;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transition: all 0.2s ease-in-out;
-  }
-  .list_hover:hover::after {
-    height: 2px;
-    width: 100%;
-  }
-</style>

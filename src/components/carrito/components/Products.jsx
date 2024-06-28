@@ -34,7 +34,7 @@ export function ProductsShoopingCart({ products }) {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}>
 
-                    <img className='h-full cover w-full' 
+                    <img loading="lazy" className='h-full cover w-full' 
                     src={isHovered ? product.image_two : product.image_one} alt={product.name}/>
 
                     <button className='bg-[#fafafa] grid place-content-center shadow-xl w-8 h-8 absolute -translate-y-[-50%]  -translate-x-[-50%] bottom-1 right-3 rounded-full'
