@@ -24,8 +24,8 @@ export function CartContentShow() {
                         <ul>
                         {cart.map(item => (
                             <li key={item.id} className="h-[272px] relative w-[680px] border-b border-t flex items-center gap-4 justify-start">
-                                <div className="w-[192px] grid shadow-lg border place-content-center h-[194px]">
-                                    <img className="object-cover" src={item.image_one} />
+                                <div className="w-[192px] grid border place-content-center h-[194px]">
+                                    <img loading="lazy" className="object-cover" src={item.image_one} />
                                 </div>
                                 <div className="flex gap-x-24">
                                     <div className="grid gap-14 justify-center">

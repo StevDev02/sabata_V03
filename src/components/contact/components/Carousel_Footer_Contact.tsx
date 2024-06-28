@@ -32,7 +32,7 @@ export function CarouselSizeContactFooter() {
       <CarouselContent>
         {ArrayImages.map((image, index) => (
           <CarouselItem key={index} className="basis-1/3 cursor-pointer relative opacity-70 rounded-3xl grid place-content-center  h-[385px] ">
-            <img className="object-cover" src={image.src} alt="" />
+            <img loading="lazy" className="object-cover" src={image.src} alt="" />
             <p className="absolute  text-xl font-semibold translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] text-center  ">{image.alt}</p>
           </CarouselItem>
         ))}

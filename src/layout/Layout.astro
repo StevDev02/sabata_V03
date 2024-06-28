@@ -38,10 +38,29 @@ const { title_page, description_page, keywords_page, last_update } =
     <!-- SLOT -->
     <slot />
     <!-- SLOT -->
-     <style>
-      body {
+     <style is:global>
+
+      html {
+        overflow-x: hidden;
+        color-scheme: light;
         font-family: 'Poppins', sans-serif;
       }
+
+      img {
+        content-visibility: auto;
+        image-rendering: optimizeSpeed;
+      }
+
+      body {
+        overflow: hidden;
+        -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+      }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      
      </style>
     <script src="../library/preline.js"></script>
   </body>

@@ -76,7 +76,7 @@ export function Nav_Home() {
               <ListItem className="-ml-10 bg-transparent" href="/docs">
                 <div className="flex flex-col items-center justify-center">
                   <div className=" w-[220px] h-[123px] ">
-                    <img
+                    <img loading="lazy"
                       className="w-full box_img_menu_items_navegation"
                       src="/img/Intro/tacones_nav_intro.png"
                       alt=""
@@ -105,7 +105,7 @@ export function Nav_Home() {
               >
                 <div className="flex flex-col items-center justify-center">
                   <div className=" w-[220px] h-[123px] ">
-                    <img
+                    <img loading="lazy"
                       className="w-full box_img_menu_items_navegation"
                       src="/img/Intro/tacones_nav_intro.png"
                       alt=""
@@ -134,7 +134,7 @@ export function Nav_Home() {
               >
                 <div className="flex flex-col items-center justify-center">
                   <div className=" w-[220px] h-[123px] ">
-                    <img
+                    <img loading="lazy"
                       className="w-full box_img_menu_items_navegation"
                       src="/img/Intro/tacones_nav_intro.png"
                       alt=""
@@ -163,7 +163,7 @@ export function Nav_Home() {
               >
                 <div className="flex flex-col items-center justify-center">
                   <div className=" w-[220px] h-[123px] ">
-                    <img
+                    <img loading="lazy"
                       className="w-full box_img_menu_items_navegation"
                       src="/img/Intro/tacones_nav_intro.png"
                       alt=""
@@ -192,7 +192,7 @@ export function Nav_Home() {
               >
                 <div className="flex flex-col items-center justify-center">
                   <div className=" w-[220px] h-[123px] ">
-                    <img
+                    <img loading="lazy"
                       className="w-full box_img_menu_items_navegation"
                       src="/img/Intro/tacones_nav_intro.png"
                       alt=""
@@ -240,140 +240,8 @@ export function Nav_Home() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-font_Poppins">Accesorios</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className=" flex cursor-auto items-center relative justify-start pb-8 pt-20 pr-28 w-[910px] flex-wrap">
-              <ListItem
-                className="-ml-10 bg-transparent"
-                href="/docs/primitives/typography"
-              >
-                <div className="flex flex-col items-center justify-center">
-                  <div className=" w-[220px] h-[123px] ">
-                    <img
-                      className="w-full box_img_menu_items_navegation"
-                      src="/img/Intro/tacones_nav_intro.png"
-                      alt=""
-                    />
-                  </div>
-                  <h2 className="font-medium text-md">Modelo S</h2>
-                  <div className="flex gap-4 mt-2">
-                    <a
-                      href="#"
-                      className=" link_visit_and_order_line text-sm  text-[#696969] hover:textbl "
-                    >
-                      Visitar
-                    </a>
-                    <a
-                      href="#"
-                      className="text-sm link_visit_and_order_line  text-[#696969] hover:textbl "
-                    >
-                      Ordenar
-                    </a>
-                  </div>
-                </div>
-              </ListItem>
-              <ListItem className="-ml-10 bg-transparent" href="/docs">
-                <div className="flex flex-col items-center justify-center">
-                  <div className=" w-[220px] h-[123px] ">
-                    <img
-                      className="w-full box_img_menu_items_navegation"
-                      src="/img/Intro/tacones_nav_intro.png"
-                      alt=""
-                    />
-                  </div>
-                  <h2 className="font-medium text-md ">Modelo X</h2>
-                  <div className="flex gap-4 mt-2">
-                    <a
-                      href="#"
-                      className=" link_visit_and_order_line text-sm  text-[#696969] hover:textbl "
-                    >
-                      Visitar
-                    </a>
-                    <a
-                      href="#"
-                      className="text-sm link_visit_and_order_line  text-[#696969] hover:textbl "
-                    >
-                      Ordenar
-                    </a>
-                  </div>
-                </div>
-              </ListItem>
-              <ListItem
-                className="-ml-10 bg-transparent"
-                href="/docs/installation"
-              >
-                <div className="flex flex-col items-center justify-center">
-                  <div className=" w-[220px] h-[123px] ">
-                    <img
-                      className="w-full box_img_menu_items_navegation"
-                      src="/img/Intro/tacones_nav_intro.png"
-                      alt=""
-                    />
-                  </div>
-                  <h2 className="font-medium text-md">Modelo L</h2>
-                  <div className="flex gap-4 mt-2">
-                    <a
-                      href="#"
-                      className=" link_visit_and_order_line text-sm  text-[#696969] hover:textbl "
-                    >
-                      Visitar
-                    </a>
-                    <a
-                      href="#"
-                      className="text-sm link_visit_and_order_line  text-[#696969] hover:textbl "
-                    >
-                      Ordenar
-                    </a>
-                  </div>
-                </div>
-              </ListItem>
-              <ListItem
-                className="-ml-10 bg-transparent"
-                href="/docs/primitives/typography"
-              >
-                <div className="flex flex-col items-center justify-center">
-                  <div className=" w-[220px] h-[123px] ">
-                    <img
-                      className="w-full box_img_menu_items_navegation"
-                      src="/img/Intro/tacones_nav_intro.png"
-                      alt=""
-                    />
-                  </div>
-                  <h2 className="font-medium text-md">Modelo M</h2>
-                  <div className="flex gap-4 mt-2">
-                    <a
-                      href="#"
-                      className=" link_visit_and_order_line text-sm  text-[#696969] hover:textbl "
-                    >
-                      Visitar
-                    </a>
-                    <a
-                      href="#"
-                      className="text-sm link_visit_and_order_line  text-[#696969] hover:textbl "
-                    >
-                      Ordenar
-                    </a>
-                  </div>
-                </div>
-              </ListItem>
-              <ListItem href="/docs/primitives/typography">
-                <ul className=" border-l pl-10 h-[280px] justify-center  flex flex-col gap-8 absolute  top-[50%] -right-[100px] -translate-y-[50%]  -translate-x-[50%] w-[220px] ">
-                  <li className="relative text_link_lateral_inline">Bolsos</li>
-                  <li className="relative text_link_lateral_inline">
-                    Carteras{" "}
-                  </li>
-                  <li className="relative text_link_lateral_inline">
-                    Relojes{" "}
-                  </li>
-                  <li className="relative text_link_lateral_inline">Anillos</li>
-                  <li className="relative text_link_lateral_inline">
-                    Tobilleras
-                  </li>
-                </ul>
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
+        <NavigationMenuItem className="pr-4">
+        <a href="/es/accessories">Accesorios</a>
         </NavigationMenuItem>
         <NavigationMenuItem className="pr-4">
         <a href="/es/shop">Tienda</a>
