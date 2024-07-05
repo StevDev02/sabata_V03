@@ -3,7 +3,7 @@
 
 // Custom Icons
 import { GoogleIcon } from "@/components/custom/Icons/Google";
-import { FacebookIcon } from "@/components/custom/Icons/Facebook";
+import { AppleIcon } from "@/components/custom/Icons/Apple";
 ---
 
 <!-- Login / Register Options -->
@@ -11,9 +11,15 @@ import { FacebookIcon } from "@/components/custom/Icons/Facebook";
   <h2 class="pb-12 text-3xl font-medium text-center -leading-5">
     Registrate y unete a la comunidad de sabata
   </h2>
-  <p class="text-sm text-center">Si ya te registraste, puedes 
-    <a data-astro-prefetch="tap" id="toLoginText" href="/es/auth/login"
-      class="text-[#ef7674] cursor-pointer hover:underline">iniciar sesion con correo</a> y navegar en nuestra comunidad.
+  <p class="text-sm text-center">
+    Si ya te registraste, puedes
+    <a
+      data-astro-prefetch="tap"
+      id="toLoginText"
+      href="/es/auth/login"
+      class="text-[#ef7674] cursor-pointer hover:underline"
+      >iniciar sesion con correo</a
+    > y navegar en nuestra comunidad.
   </p>
   <div class="bg_text_login -z-0"></div>
   <div class="bg_text_login2 -z-0"></div>
@@ -28,27 +34,32 @@ import { FacebookIcon } from "@/components/custom/Icons/Facebook";
     <button
       title="Iniciar Sesion con Google | Sabata"
       aria-label="Iniciar Sesion con Google | Sabata"
-      id="google" class="bg-white  p-2 border rounded-full shadow-md">
+      id="google"
+      class="bg-white p-2 border rounded-full shadow-md"
+    >
       <GoogleIcon />
     </button>
     <button
       title="Iniciar Sesion con Google | Sabata"
       aria-label="Iniciar Sesion con Google | Sabata"
-      id="google" class="bg-white  p-2 border rounded-full shadow-md">
-      <FacebookIcon />
+      id="google"
+      class="bg-white p-4 border rounded-full shadow-md"
+    >
+      <AppleIcon />
     </button>
   </div>
 </div>
-<img loading="lazy" class="absolute translate-x-[-50%] translate-y-[-50%] left-[45%] top-[60%] " src="https://i.ibb.co/JHxFPfB/woman-5831820-1280-removebg-preview.png" alt="">
-<div class="bg-[#e0ba6c] top-[30%] left-[87%] absolute translate-x-[-50%] translate-y-[-50%] mix-blend-multiply filter blur-xl opacity-20 h-80 w-80  inset-0 m-auto  rounded-full  " />
-<div class="bg-[#ef7674] top-[55%] left-[75%] absolute translate-x-[-50%] translate-y-[-50%] mix-blend-multiply filter blur-xl opacity-20 h-80 w-80  inset-0 m-auto  rounded-full  " />
-
-<script>
-
-  const googleSignin = document.querySelector("#toLoginText") as HTMLButtonElement
-
-  googleSignin.addEventListener("click", () => {
-    window.location.href = "/es/auth/login"
-  })
-
-</script>
+<img
+  loading="lazy"
+  class="absolute translate-x-[-50%] translate-y-[-50%] left-[45%] top-[60%]"
+  src="https://i.ibb.co/JHxFPfB/woman-5831820-1280-removebg-preview.png"
+  alt=""
+/>
+<div
+  class="bg-[#e0ba6c] top-[30%] left-[87%] absolute translate-x-[-50%] translate-y-[-50%] mix-blend-multiply filter blur-xl opacity-20 h-80 w-80 inset-0 m-auto rounded-full"
+>
+</div>
+<div
+  class="bg-[#ef7674] top-[55%] left-[75%] absolute translate-x-[-50%] translate-y-[-50%] mix-blend-multiply filter blur-xl opacity-20 h-80 w-80 inset-0 m-auto rounded-full"
+>
+</div>

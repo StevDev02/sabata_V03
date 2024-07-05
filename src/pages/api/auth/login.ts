@@ -1,53 +1,58 @@
 import type { APIRoute } from "astro";
-import { app } from "../../../firebase/server";
-import { getAuth } from "firebase-admin/auth";
+import { supabase } from "../../../lib/supabase";
+import type { Provider } from "@supabase/supabase-js";
 
-export const GET: APIRoute = async ({ request, cookies, redirect }) => {
-  const auth = getAuth(app);
+export const POST: APIRoute = async ({ request, cookies, redirect }) => {
+  const formData = await request.formData();
+  const email = formData.get("email")?.toString();
+  const password = formData.get("password")?.toString();
+  const provider = formData.get("provider")?.toString();
 
-  /* Get token from request headers */
-  const idToken = request.headers.get("Authorization")?.split("Bearer ")[1];
-  if (!idToken) {
-    return new Response("No token found", { status: 401 });
+  const validProviders = ["google", "apple"];
+
+  if (provider && validProviders.includes(provider)) {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: provider as Provider,
+      options: {
+        redirectTo: import.meta.env.DEV
+          ? "http://localhost:4321/api/auth/callback"
+          : "https://sabatasiempresabata.vercel.app/api/auth/callback",
+      },
+    });
+
+    if (error) {
+      return new Response(error.message, { status: 500 });
+    }
+
+    return redirect(data.url);
   }
 
-  /* Verify id token */
-  try {
-    await auth.verifyIdToken(idToken);
-  } catch (error) {
-    return new Response("Invalid token", { status: 401 });
+  if (!email || !password) {
+    return new Response("Email and password are required", { status: 400 });
   }
 
-  let sessionCookie;
-  try {
-    /* Verify the ID token */
-    await auth.verifyIdToken(idToken);
-    const fiveDays = 60 * 60 * 24 * 5 * 1000;
-    sessionCookie = await auth
-      .createSessionCookie(idToken, { expiresIn: fiveDays })
-      .catch((error) => {
-        return new Response(
-          JSON.stringify({
-            message: error.message,
-          }),
-          { status: 401 }
-        );
-      });
-  } catch (error: any) {
-    return new Response(
-      JSON.stringify({
-        error: "The server is on fire",
-      }),
-      { status: 401 }
-    );
-  }
-
-  cookies.set("__session", sessionCookie, {
-    path: "/",
-    httpOnly: true,
-    secure: true,
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+    options: {
+      //captchaToken: ""
+    },
   });
 
-  console.log("User Logged Succesfully");
-  return redirect("/es/shop", 302);
+  if (error) {
+    return new Response(error.message, { status: 500 });
+  }
+
+  const { access_token, refresh_token } = data.session;
+  cookies.set("sb-access-token", access_token, {
+    sameSite: "strict",
+    path: "/",
+    secure: true,
+  });
+  cookies.set("sb-refresh-token", refresh_token, {
+    sameSite: "strict",
+    path: "/",
+    secure: true,
+  });
+  return redirect("/es/shop");
 };

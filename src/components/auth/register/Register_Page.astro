@@ -6,11 +6,12 @@ import NavRegister from "./custom/nav/NavRegister.astro";
 import { RegisterForm } from "./RegisterForm";
 // Styles
 import "./Register.module.css";
+// Optimized Background
+import { BackgroundImgComponent } from "@/components/custom/Image/BackgroundImgComponent";
 ---
 
 <!-- Register Page -->
-<section
-  class="w-full bg-[#e6e7eb] h-[110dvh] ">
+<BackgroundImgComponent className="bg-[#e6e7eb] xl:h-dvh" src="">
   <header class="">
     <NavRegister />
   </header>
@@ -20,4 +21,4 @@ import "./Register.module.css";
     <RegisterForm client:idle />
     <RegisterOptionText />
   </section>
-</section>
+</BackgroundImgComponent>

@@ -6,11 +6,12 @@ import NavLogin from "./custom/nav/NavLogin.astro";
 import LoginOptionText from "./LoginOptionText.astro";
 // Styles
 import "./Login.module.css";
+// Optimized Background
 import { BackgroundImgComponent } from "@/components/custom/Image/BackgroundImgComponent";
 ---
 
 <!-- Login Page -->
-<section class="w-full bg-[#e6e7eb] h-[110dvh] ">
+<BackgroundImgComponent className="bg-[#e6e7eb] xl:h-dvh" src="">
   <header>
     <NavLogin />
   </header>
@@ -20,4 +21,4 @@ import { BackgroundImgComponent } from "@/components/custom/Image/BackgroundImgC
     <LoginOptionText />
     <Login_Form client:idle />
   </section>
-</section>
+</BackgroundImgComponent>

@@ -10,7 +10,7 @@ import { ViewTransitions } from "astro:transitions";
 // Fonts
 
 import "@fontsource-variable/cabin";
-import '@fontsource/poppins';
+import "@fontsource/poppins";
 
 interface Props {
   title_page: string;
@@ -26,6 +26,7 @@ const { title_page, description_page, keywords_page, last_update } =
 <!doctype html>
 <html lang="es-MX" class="h-full antialiased scroll-smooth">
   <head>
+    <ViewTransitions />
     <SEO_TAGS
       title_page={title_page}
       description_page={description_page}
@@ -38,12 +39,11 @@ const { title_page, description_page, keywords_page, last_update } =
     <!-- SLOT -->
     <slot />
     <!-- SLOT -->
-     <style is:global>
-
+    <style is:global>
       html {
         overflow-x: hidden;
         color-scheme: light;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
       }
 
       img {
@@ -60,8 +60,7 @@ const { title_page, description_page, keywords_page, last_update } =
       body::-webkit-scrollbar {
         display: none;
       }
-      
-     </style>
+    </style>
     <script src="../library/preline.js"></script>
   </body>
 </html>

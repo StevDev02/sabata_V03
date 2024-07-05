@@ -19,7 +19,8 @@ html {
   color-scheme: light;
 }
 
-img, svg {
+img,
+svg {
   content-visibility: auto;
   image-rendering: optimizeSpeed;
   shape-rendering: auto;

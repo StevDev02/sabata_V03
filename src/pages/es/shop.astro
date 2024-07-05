@@ -3,8 +3,38 @@
 import Shop_Layout from "../../layout/Layout.astro";
 // Sections
 import Shop_Page from "@/components/shop/Shop_Page.astro";
-// Optimized Image
+// Supabase
+import { supabase } from "../../lib/supabase";
+const { cookies, redirect } = Astro;
 
+const accessToken = cookies.get("sb-access-token");
+const refreshToken = cookies.get("sb-refresh-token");
+
+if (!accessToken || !refreshToken) {
+  return redirect("/es/auth/login");
+}
+
+const { error } = await supabase.auth.setSession({
+  refresh_token: refreshToken.value,
+  access_token: accessToken.value,
+});
+
+if (error) {
+  cookies.delete("sb-access-token", {
+    path: "/",
+    // Change on production
+    //sameSite: "strict",
+    secure: true,
+  });
+  cookies.delete("sb-refresh-token", {
+    path: "/",
+    // Change on production
+    //sameSite: "strict",
+    secure: true,
+  });
+
+  return redirect("/es/auth/login");
+}
 ---
 
 <Shop_Layout
@@ -13,8 +43,5 @@ import Shop_Page from "@/components/shop/Shop_Page.astro";
   last_update="2024-05-02"
   keywords_page={[""]}
 >
-
   <Shop_Page />
-  
 </Shop_Layout>
-

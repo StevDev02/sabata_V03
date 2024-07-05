@@ -8,7 +8,7 @@ import compressor from "astro-compressor";
 // https://astro.build/config
 export default defineConfig({
   prefetch: true,
-  site: "https://sabata.com",
+  site: "https://sabatasiempresabata.vercel.app",
   integrations: [
     react(),
     compressor({ gzip: true, brotli: false }),

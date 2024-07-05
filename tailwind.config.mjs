@@ -24,19 +24,19 @@ export default {
           to: { height: "0" },
         },
         blop: {
-          '0%': {
-            transform: 'translate(0px, 0px) scale(1)',
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
           },
-          '33%': {
-            transform: 'scale(1.1)',
+          "33%": {
+            transform: "scale(1.1)",
           },
-          '66%': {
-            transform: ' scale(0.9)',
+          "66%": {
+            transform: " scale(0.9)",
           },
-          '100%': {
-            transform: 'translate(0px, 0px) scale(1)',
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
           },
-        }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -49,5 +49,5 @@ export default {
       },
     },
   },
-  plugins: [require("preline/plugin")],
+  plugins: [require("preline/plugin"), require("tailwindcss-animated")],
 };
