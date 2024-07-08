@@ -5,31 +5,31 @@ import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel/serverless";
 import compressor from "astro-compressor";
 
+import auth from "auth-astro";
+
 // https://astro.build/config
 export default defineConfig({
   prefetch: true,
   site: "https://sabata.com",
-  integrations: [
-    react(),
-    compressor({ gzip: true, brotli: false }),
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    sitemap({
-      changefreq: "monthly",
-      priority: 0.8,
-      lastmod: new Date("2024-06-11"),
-      i18n: {
-        defaultLocale: "es",
-        locales: {
-          es: "es-MX",
-        },
-      },
-    }),
-  ],
+  integrations: [react(), compressor({
+    gzip: true,
+    brotli: false
+  }), tailwind({
+    applyBaseStyles: false
+  }), sitemap({
+    changefreq: "monthly",
+    priority: 0.8,
+    lastmod: new Date("2024-06-11"),
+    i18n: {
+      defaultLocale: "es",
+      locales: {
+        es: "es-MX"
+      }
+    }
+  }), auth()],
   security: {
-    checkOrigin: true,
+    checkOrigin: true
   },
   output: "server",
-  adapter: vercel(),
+  adapter: vercel()
 });

@@ -1,0 +1,64 @@
+---
+// Layout
+import Holamundo_ from "../layout/Layout.astro";
+import { getSession } from "auth-astro/server";
+
+const session = await getSession(Astro.request);
+console.log(session);
+
+---
+
+<Holamundo_
+  title_page="Inicio"
+  description_page=""
+  last_update="2024-05-02"
+  keywords_page={[""]}>
+
+  <h1>Hola mundo</h1>
+  <p>Estas visitando mi sitio web desde un dispositivo <span id="navegador_"></span></p>
+
+  <br>
+  <br>
+
+  {
+    session && 
+    <div>
+      <p>Estas conectado como {session.user?.name}</p>
+      <img src={session.user?.image} alt="avatar" />
+    </div>
+    
+  }
+  <br>
+  <br>
+  <br>
+  <button id="login">Login</button>
+  <br>
+  <br>
+  <br>
+  <button id="logout">Logout</button>
+
+  <script>
+    const navegador_ = document.querySelector("#navegador_") as HTMLSpanElement;
+    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+        navegador_.textContent = "móvil";
+    } else if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+      navegador_.textContent = "tableta";
+    } else {
+      navegador_.textContent = "pc";
+    }
+
+
+    const { signIn, signOut } = await import("auth-astro/client")
+    document.querySelector("#login") as HTMLButtonElement;
+    document.querySelector("#logout") as HTMLButtonElement;
+
+    document.querySelector("#login")?.addEventListener("click", async () => {
+      await signIn("google");
+    });
+    document.querySelector("#logout")?.addEventListener("click", async () => {
+      await signOut();
+    });
+
+</script>
+
+</Holamundo_>

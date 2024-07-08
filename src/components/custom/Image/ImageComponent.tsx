@@ -55,7 +55,7 @@ const ImageComponent = React.forwardRef<HTMLImageElement, ImageProps>(
     }, [src]);
 
     return (
-      <img loading="lazy"
+      <img
         src={srcValue || placeholder}
         srcSet={srcSetValue}
         alt={alt}

@@ -14,30 +14,4 @@ import Register_Page from "@/components/auth/register/Register_Page.astro";
   <Register_Page />
 </Register_Layout>
 
-<script>
-  import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-  import { app } from "@/firebase/client";
 
-  const auth = getAuth(app);
-
-  const googleSignin = document.querySelector("#google") as HTMLButtonElement;
-  googleSignin.addEventListener("click", async () => {
-    const provider = new GoogleAuthProvider();
-    try {
-      const userCredential = await signInWithPopup(auth, provider);
-      const idToken = await userCredential.user.getIdToken();
-      const res = await fetch("/api/auth/login", {
-        headers: {
-          Authorization: `Bearer ${idToken}`,
-        },
-      });
-      if (!res.redirected) {
-        window.location.reload();
-      } else {
-        window.location.assign(res.url);
-      }
-    } catch (error) {
-      console.error("Error during Google sign-in:", error);
-    }
-  });
-</script>
