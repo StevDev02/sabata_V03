@@ -35,15 +35,70 @@ import { Nav_Home } from "@/components/home/custom/components/nav/Nav_Home";
       </div>
   </nav>
   <main class="relative bg-black">
-    <section  class="header_scroll_home section">
-      <IntroPage />
-    </section>
-      <WomenFashionPage />
-      <SummerOfferPage />
-      <DiscountProductsPage />
-      <LifeStylePage />
-      <CollectionPage />
-      <Footer />
+      <section class="first">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg one">
+              <IntroPage />
+            </div>
+          </div>
+        </div>
+      
+      </section>
+      <section class="second">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg">
+              <WomenFashionPage />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="third">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg">
+              <SummerOfferPage />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fourth">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg">
+              <DiscountProductsPage />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fifth">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg">
+              <LifeStylePage />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fifth">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg">
+              <CollectionPage />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fifth">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg">
+              <Footer />
+            </div>
+          </div>
+        </div>
+      </section>
   </main>
 </Home>
 
@@ -53,7 +108,42 @@ import { Nav_Home } from "@/components/home/custom/components/nav/Nav_Home";
     -webkit-backdrop-filter: blur(2px) saturate(97%);
     background-color: rgba(1, 1, 1, 0.05);
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: black;
+  }
+
+  section {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            position: fixed;
+            visibility: hidden;
+        }
+        .outer, .inner {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        .bg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fifth .bg {
+          background-color: #232323;
+        }
 </style>
 
-<script src="../animations/useScrollHome.ts" ></script>
+<script src="../animations/useScrollHome" ></script>
 <!-- ahora te mostrare un video del efecto que deseo conseguir oki, este hace la animacion scroll ya sea presionando una vez la tecla flecha abajo o un pequeñito scroll: -->
